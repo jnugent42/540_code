@@ -1,0 +1,11 @@
+g++ -o plot_volts_peaks plot_volts_peaks.cpp `root-config --cflags --libs`
+g++ -o plot_volts_peaks_4channels plot_volts_peaks_4channels.cpp `root-config --cflags --libs`
+g++ -o calculate_gain calculate_gain.cpp `root-config --cflags --libs`
+g++ -o laser_ball_characterisation laser_ball_characterisation.cpp `root-config --cflags --libs`
+g++ -o Bellamy_executable Bellamy_executable.cpp `root-config --cflags --libs`
+g++ -o calculate_gain calculate_gain.cpp `root-config --cflags --libs`
+g++ -o LandauFit LandauFit.cpp `root-config --cflags --libs`
+g++ -o LandauFit_TTree LandauFit_TTree.cpp `root-config --cflags --libs`
+g++ -o pmt_response_function_tweakedCircle_volts pmt_response_function_tweakedCircle_volts.cpp `root-config --cflags --libs`
+g++ -o See_Waveform See_Waveform.cpp `root-config --cflags --libs`
+g++ -o TTS_executable TTS_executable.cpp `root-config --cflags --libs`

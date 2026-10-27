@@ -13,6 +13,8 @@
 #include "TTree.h"
 #include "TBranch.h"
 #include "TMath.h"
+#include "TFitResult.h"
+#include "TText.h"
 
 const double pi = acos(-1.0);
 
@@ -466,8 +468,8 @@ std::vector< TF1* > get_model1_components( double * p ){
 
 
 /// Test case code to test the fitting ***with pedestal***
-//int main(void){
-void pmt_response_function_tweakedCircle_volts(){
+int main(void){
+//void pmt_response_function_tweakedCircle_volts(){
     
     const char * PMTform = "None";
     const char * face_position = "None";
@@ -530,8 +532,8 @@ void pmt_response_function_tweakedCircle_volts(){
   double mufix = Nrest / N0;
   mufix = log( mufix + 1 ); // correction factor to go from estimated mu, to true
   //double mufix = 5;
-  cout << "Nfix = "<<Nfix<<" Nrest="<<Nrest<<" / N0 = "<<N0<<" = "<<mufix<<std::endl;
-  cout << "mufix = " << mufix << std::endl;
+  std::cout << "Nfix = "<<Nfix<<" Nrest="<<Nrest<<" / N0 = "<<N0<<" = "<<mufix<<std::endl;
+  std::cout << "mufix = " << mufix << std::endl;
 
   ff->SetNpx(1000);
   //Best values are square, circle, losange, triangle

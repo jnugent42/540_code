@@ -28,7 +28,7 @@ double Landau2C(double *x, double *par){
 
 
 //this is a code to landau fit 1 channel of PMT data
-void LandauFit(TFile * f_LAS1msN, char* data_name, TH1D * h_LAS1msN, TH1D * h_LAS1msC, TH1D * h_LAS1msQ, TH1D * h_chi2, char* path_to_output_file){
+void LandauFit(TFile * f_LAS1msN, const char* data_name, TH1D * h_LAS1msN, TH1D * h_LAS1msC, TH1D * h_LAS1msQ, TH1D * h_chi2, const char* path_to_output_file){
 	double pe_DR1sPD, pe_LAS1sPD, pe_LAS1msN, pe_DR1msN;
 	double thresh = 0.009; //we need at least that number of PE/volts max to be considered a pulse
 	double threshInit = thresh; //this is the first point we consider to be part the pulse - landau
@@ -207,7 +207,7 @@ int main(int argc, char **argv) {
 	char * PMTform = NULL;
 	char * face_position = NULL;
 	char * path_to_input_file = NULL;
-	char * path_to_output_file = "../data/output_LandauFit.root";
+	const char * path_to_output_file = "../data/output_LandauFit.root";
 	char option;
 	int triggerChannel = 0;
 	//the following piece of code reads in some user input

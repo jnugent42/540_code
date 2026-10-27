@@ -8,6 +8,9 @@
 #include "TH2D.h"
 #include "TCanvas.h"
 #include "TStyle.h"
+#include "TF1.h"
+#include "TFitResult.h"
+#include "TTree.h"
 
 void plotLaserBallMap() {
 

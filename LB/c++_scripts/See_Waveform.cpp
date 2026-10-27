@@ -14,7 +14,7 @@
 
 
 //this is a code to landau fit 1 channel of PMT data
-void LandauFit(TFile * f_LAS1msN, char* data_name, char* path_to_output_file){
+void LandauFit(TFile * f_LAS1msN, const char* data_name, const char* path_to_output_file){
 	double pe_LAS1msN;
 	int reps = 100; // Total 1ms Windows
 
@@ -67,7 +67,7 @@ int main(int argc, char **argv) {
 	char * PMTform = NULL;
 	char * face_position = NULL;
 	char * path_to_input_file = NULL;
-	char * path_to_output_file = "../data/output_LandauFit.root";
+	const char * path_to_output_file = "../data/output_LandauFit.root";
 	char option;
 	int triggerChannel = 0;
 	//the following piece of code reads in some user input

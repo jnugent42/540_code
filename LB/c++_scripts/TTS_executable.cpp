@@ -132,7 +132,7 @@ int main(int argc, char **argv){
 	gStyle->SetStatH(0.5);	
 
 	char * path_to_input_file = NULL;
-	char * path_to_output_file = "output_TTS.root";
+	const char * path_to_output_file = "output_TTS.root";
 
 	//can change this for a more user-chosen approach, these values will work for our
 	//set-up @ Imperial
